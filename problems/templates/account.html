@@ -1,0 +1,9 @@
+{% extends 'base_generic.html' %}
+{% block content %}
+    <h2>Change your password here</h2>
+    <form action="{% url 'account' %}" method="POST" name="change_pw">
+        <!--Missing CSRF token and no check for current password-->
+        <input type="password" name="password">
+        <input type="submit" value="Change password">
+    </form>
+{% endblock content %}

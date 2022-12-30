@@ -1,0 +1,9 @@
+{% extends 'base_generic.html' %}
+{% block content %}
+    <h2>Search for entries </h2>
+    {% if entries %}
+    {% for entry in entries %}
+        <p>{{ entry }}</p>
+    {% endfor %}
+    {% endif %}
+{% endblock content %}
