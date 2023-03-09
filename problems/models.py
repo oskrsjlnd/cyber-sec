@@ -1,9 +1,8 @@
 from django.db import models
-
 # Create your models here.
+
 class Account(models.Model):
     user = models.CharField(max_length=200, unique=True)
-    # Passwords are not stored with secure hashing and functions
     password = models.CharField(max_length=200)
 
     def __str__(self):
@@ -15,3 +14,9 @@ class Diary(models.Model):
 
     def __str__(self):
         return self.entry
+
+# FIX FOR LOGGING
+# class UserLogs(models.Model):
+    # user = models.CharField(max_length=200)
+    # time = models.TimeField()
+    # event = models.CharField(max_length=64)
